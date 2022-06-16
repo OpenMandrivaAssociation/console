@@ -1,22 +1,18 @@
 Name:           console
 Version:        42.beta
-Release:        0
+Release:        1
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
-License:        GPL-3.0-only
+License:        GPL-3.0
 URL:            https://gitlab.gnome.org/GNOME/console
-Source:         %{name}-%{version}.tar.xz
+Source:         https://gitlab.gnome.org/GNOME/console/-/archive/%{version}/console-%{version}.tar.bz2
 
-BuildRequires:  appstream-glib
-BuildRequires:  c_compiler
-BuildRequires:  c++_compiler
+BuildRequires:  appstream-utils
 BuildRequires:  desktop-file-utils
-BuildRequires:  libxml2-tools
+BuildRequires:  libxml2-utils
 BuildRequires:  meson >= 0.59.0
-BuildRequires:  pkgconfig
 BuildRequires:  sassc
 BuildRequires:  pkgconfig(gio-2.0) >= 2.66
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.24
-# Disabled for now
 #BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(libhandy-1) >= 1.5
 BuildRequires:  pkgconfig(vte-2.91) >= 0.67
@@ -44,18 +40,15 @@ arbitrary folders.
 %build
 %meson \
 	-D tests=true \
-	-D nautilus=enabled \
-	%{nil}
+	-D nautilus=enabled
 %meson_build
 
 %install
 %meson_install
 %find_lang kgx %{?no_lang_C} %{name}.lang
 
-%check
-%meson_test
 
-%files
+%files -f %{name}.lang
 %license COPYING
 %doc README.md
 %{_bindir}/kgx
@@ -69,4 +62,3 @@ arbitrary folders.
 %files -n nautilus-extension-console
 %{_libdir}/nautilus/extensions-3.0/libkgx-nautilus.so
 
-%files lang -f %{name}.lang
