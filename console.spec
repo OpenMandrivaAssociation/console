@@ -41,7 +41,7 @@ arbitrary folders.
 %build
 %meson \
 	-D tests=false \
-	-D nautilus=enabled
+	-D nautilus=disabled
 %meson_build
 
 %install
