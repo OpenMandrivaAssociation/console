@@ -40,7 +40,7 @@ arbitrary folders.
 
 %build
 %meson \
-	-D tests=true \
+	-D tests=false \
 	-D nautilus=enabled
 %meson_build
 
