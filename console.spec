@@ -37,11 +37,12 @@ arbitrary folders.
 
 %prep
 %autosetup -p1
+sed -i "s/'werror=true'/'werror=false'/g" meson.build
 
 %build
 %meson \
 	-D tests=false \
-	-D nautilus=disabled
+	-D nautilus=enabled
 %meson_build
 
 %install
