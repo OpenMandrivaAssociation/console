@@ -20,6 +20,7 @@ BuildRequires:  pkgconfig(libgtop-2.0)
 BuildRequires:  pkgconfig(gsettings-desktop-schemas)
 BuildRequires:  pkgconfig(libnautilus-extension)
 BuildRequires:  pkgconfig(gio-unix-2.0)
+BuildRequires:	pkgconfig(libpcre2-8)
 
 %description
 A simple user-friendly terminal emulator for the GNOME desktop.
