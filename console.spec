@@ -6,7 +6,7 @@ License:        GPL-3.0
 URL:            https://gitlab.gnome.org/GNOME/console
 Source:         https://gitlab.gnome.org/GNOME/console/-/archive/%{version}/console-%{version}.tar.bz2
 
-BuildRequires:  appstream-utils
+BuildRequires:  appstream-util
 BuildRequires:  desktop-file-utils
 BuildRequires:  libxml2-utils
 BuildRequires:  meson >= 0.59.0
