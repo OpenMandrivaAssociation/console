@@ -1,10 +1,11 @@
 Name:           console
-Version:        42.beta
+Version:        42.0
 Release:        1
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
 License:        GPL-3.0
 URL:            https://gitlab.gnome.org/GNOME/console
-Source:         https://gitlab.gnome.org/GNOME/console/-/archive/%{version}/console-%{version}.tar.bz2
+#Source:         https://gitlab.gnome.org/GNOME/console/-/archive/%{version}/console-%{version}.tar.bz2
+Source0:	https://download.gnome.org/sources/gnome-console/42/gnome-console-%{version}.tar.xz
 
 BuildRequires:  appstream-util
 BuildRequires:  desktop-file-utils
@@ -36,7 +37,7 @@ This is a nautilus extension that allows you to open a terminal in
 arbitrary folders.
 
 %prep
-%autosetup -p1
+%autosetup -n gnome-console-%{version} -p1
 sed -i "s/'werror=true'/'werror=false'/g" meson.build
 
 %build
