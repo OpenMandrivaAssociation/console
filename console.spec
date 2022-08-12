@@ -1,5 +1,5 @@
 Name:           console
-Version:        42.0
+Version:        42.2
 Release:        1
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
 License:        GPL-3.0
@@ -22,6 +22,8 @@ BuildRequires:  pkgconfig(gsettings-desktop-schemas)
 BuildRequires:  pkgconfig(libnautilus-extension)
 BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:	pkgconfig(libpcre2-8)
+
+Provides:	gnome-console
 
 %description
 A simple user-friendly terminal emulator for the GNOME desktop.
