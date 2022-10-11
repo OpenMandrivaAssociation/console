@@ -1,5 +1,5 @@
 Name:           console
-Version:        42.2
+Version:        43.0
 Release:        1
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
 License:        GPL-3.0
@@ -13,10 +13,9 @@ BuildRequires:  libxml2-utils
 BuildRequires:  meson >= 0.59.0
 BuildRequires:  sassc
 BuildRequires:  pkgconfig(gio-2.0) >= 2.66
-BuildRequires:  pkgconfig(gtk+-3.0) >= 3.24
-#BuildRequires:  pkgconfig(gtk4)
-BuildRequires:  pkgconfig(libhandy-1) >= 1.5
-BuildRequires:  pkgconfig(vte-2.91) >= 0.67
+BuildRequires:  pkgconfig(gtk4)
+BuildRequires:  pkgconfig(libadwaita-1)
+BuildRequires:  pkgconfig(vte-2.91-gtk4)
 BuildRequires:  pkgconfig(libgtop-2.0)
 BuildRequires:  pkgconfig(gsettings-desktop-schemas)
 BuildRequires:  pkgconfig(libnautilus-extension)
