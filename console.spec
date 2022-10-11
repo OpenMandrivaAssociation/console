@@ -11,31 +11,23 @@ BuildRequires:  appstream-util
 BuildRequires:  desktop-file-utils
 BuildRequires:  libxml2-utils
 BuildRequires:  meson >= 0.59.0
-BuildRequires:  sassc
 BuildRequires:  pkgconfig(gio-2.0) >= 2.66
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(libadwaita-1)
 BuildRequires:  pkgconfig(vte-2.91-gtk4)
 BuildRequires:  pkgconfig(libgtop-2.0)
 BuildRequires:  pkgconfig(gsettings-desktop-schemas)
-BuildRequires:  pkgconfig(libnautilus-extension)
 BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:	pkgconfig(libpcre2-8)
 
 Provides:	gnome-console
+Obsoletes: nautilus-extension-console < 43.0
 
 %description
 A simple user-friendly terminal emulator for the GNOME desktop.
 
 %lang_package
 
-%package -n nautilus-extension-console
-Summary:        Nautilus Extension to open Console in Folders
-Supplements:    (nautilus and %{name})
-
-%description -n nautilus-extension-console
-This is a nautilus extension that allows you to open a terminal in
-arbitrary folders.
 
 %prep
 %autosetup -n gnome-console-%{version} -p1
@@ -44,7 +36,6 @@ sed -i "s/'werror=true'/'werror=false'/g" meson.build
 %build
 %meson \
 	-D tests=false \
-	-D nautilus=enabled
 %meson_build
 
 %install
@@ -63,6 +54,4 @@ sed -i "s/'werror=true'/'werror=false'/g" meson.build
 %{_datadir}/icons/hicolor/symbolic/apps/org.gnome.Console-symbolic.svg
 %{_datadir}/metainfo/org.gnome.Console.metainfo.xml
 
-%files -n nautilus-extension-console
-%{_libdir}/nautilus/extensions-3.0/libkgx-nautilus.so
 
