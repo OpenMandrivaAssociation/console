@@ -1,6 +1,6 @@
 Name:           console
 Version:        43.0
-Release:        1
+Release:        2
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
 License:        GPL-3.0
 URL:            https://gitlab.gnome.org/GNOME/console
