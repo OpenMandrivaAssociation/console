@@ -1,5 +1,5 @@
 Name:           console
-Version:        44.0
+Version:        44.4
 Release:        1
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
 License:        GPL-3.0
