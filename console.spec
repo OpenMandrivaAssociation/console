@@ -1,11 +1,11 @@
 Name:           console
-Version:        44.4
+Version:        45.0
 Release:        1
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
 License:        GPL-3.0
 URL:            https://gitlab.gnome.org/GNOME/console
 #Source:         https://gitlab.gnome.org/GNOME/console/-/archive/%{version}/console-%{version}.tar.bz2
-Source0:	https://download.gnome.org/sources/gnome-console/44/gnome-console-%{version}.tar.xz
+Source0:	https://download.gnome.org/sources/gnome-console/45/gnome-console-%{version}.tar.xz
 
 BuildRequires:  appstream-util
 BuildRequires:  desktop-file-utils
