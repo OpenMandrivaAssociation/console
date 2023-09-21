@@ -1,11 +1,11 @@
 Name:           console
-Version:        45
-Release:        0.beta.0
+Version:        45.0
+Release:        1
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
 License:        GPL-3.0
 URL:            https://gitlab.gnome.org/GNOME/console
 #Source:         https://gitlab.gnome.org/GNOME/console/-/archive/%{version}/console-%{version}.tar.bz2
-Source0:	https://download.gnome.org/sources/gnome-console/45/gnome-console-%{version}.beta.tar.xz
+https://download.gnome.org/sources/gnome-console/45/gnome-console-%{version}.tar.xz
 
 BuildRequires:  appstream-util
 BuildRequires:  desktop-file-utils
@@ -30,7 +30,7 @@ A simple user-friendly terminal emulator for the GNOME desktop.
 
 
 %prep
-%autosetup -n gnome-console-%{version}.beta -p1
+%autosetup -n gnome-console-%{version} -p1
 sed -i "s/'werror=true'/'werror=false'/g" meson.build
 
 %build
