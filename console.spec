@@ -11,6 +11,7 @@ BuildRequires:  appstream-util
 BuildRequires:  desktop-file-utils
 BuildRequires:  libxml2-utils
 BuildRequires:  meson >= 0.59.0
+BuildRequires:	gettext
 BuildRequires:  pkgconfig(gio-2.0) >= 2.66
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(libadwaita-1)
