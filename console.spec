@@ -1,5 +1,5 @@
 Name:           console
-Version:        48.0.1
+Version:        49.0
 Release:        1
 Summary:        A simple user-friendly terminal emulator for the GNOME desktop
 License:        GPL-3.0
